@@ -1,7 +1,6 @@
 package com.saturnindao.controller;
 
 import com.saturnindao.entity.Movie;
-import com.saturnindao.service.MovieService;
 import com.saturnindao.service.MovieServiceInterface;
 
 import java.util.Scanner;

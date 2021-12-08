@@ -1,10 +1,9 @@
 package com.saturnindao.service;
 
 import com.saturnindao.entity.Movie;
-import com.saturnindao.repository.GoLiveMovieRepository;
 import com.saturnindao.repository.MovieRepositoryInterface;
 
-public class MovieService implements MovieServiceInterface {
+public class DefaultMovieService implements MovieServiceInterface {
 
     public MovieRepositoryInterface getMovieRepository() {
         return movieRepository;
