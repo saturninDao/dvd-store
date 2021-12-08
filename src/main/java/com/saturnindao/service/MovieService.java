@@ -6,9 +6,19 @@ import com.saturnindao.repository.MovieRepositoryInterface;
 
 public class MovieService implements MovieServiceInterface {
 
-    private MovieRepositoryInterface goLiveMovieRepository;
+    public MovieRepositoryInterface getMovieRepository() {
+        return movieRepository;
+    }
+
+    public void setMovieRepository(MovieRepositoryInterface movieRepository) {
+        this.movieRepository = movieRepository;
+    }
+
+    private MovieRepositoryInterface movieRepository;
+
+
 
     public void registerMovie(Movie movie){
-        goLiveMovieRepository.add(movie);
+        movieRepository.add(movie);
     }
 }
