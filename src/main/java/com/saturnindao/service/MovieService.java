@@ -2,10 +2,11 @@ package com.saturnindao.service;
 
 import com.saturnindao.entity.Movie;
 import com.saturnindao.repository.GoLiveMovieRepository;
+import com.saturnindao.repository.MovieRepositoryInterface;
 
-public class MovieService {
+public class MovieService implements MovieServiceInterface {
 
-    private GoLiveMovieRepository goLiveMovieRepository = new GoLiveMovieRepository();
+    private MovieRepositoryInterface goLiveMovieRepository;
 
     public void registerMovie(Movie movie){
         goLiveMovieRepository.add(movie);

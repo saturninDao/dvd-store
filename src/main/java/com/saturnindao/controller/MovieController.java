@@ -2,12 +2,13 @@ package com.saturnindao.controller;
 
 import com.saturnindao.entity.Movie;
 import com.saturnindao.service.MovieService;
+import com.saturnindao.service.MovieServiceInterface;
 
 import java.util.Scanner;
 
 public class MovieController {
 
-    MovieService movieService = new MovieService();
+    MovieServiceInterface movieService;
 
     public void addUsingConsole(){
         System.out.println( "What is the title of film that you want to add ?" );
