@@ -2,8 +2,12 @@ package com.saturnindao.service;
 
 import com.saturnindao.entity.Movie;
 import com.saturnindao.repository.MovieRepositoryInterface;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class DefaultMovieService implements MovieServiceInterface {
+
+    @Autowired
+    private MovieRepositoryInterface movieRepository;
 
     public MovieRepositoryInterface getMovieRepository() {
         return movieRepository;
@@ -12,8 +16,6 @@ public class DefaultMovieService implements MovieServiceInterface {
     public void setMovieRepository(MovieRepositoryInterface movieRepository) {
         this.movieRepository = movieRepository;
     }
-
-    private MovieRepositoryInterface movieRepository;
 
 
 

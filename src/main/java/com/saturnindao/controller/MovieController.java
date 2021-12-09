@@ -2,10 +2,14 @@ package com.saturnindao.controller;
 
 import com.saturnindao.entity.Movie;
 import com.saturnindao.service.MovieServiceInterface;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Scanner;
 
 public class MovieController {
+
+    @Autowired
+    MovieServiceInterface movieService;
 
     public MovieServiceInterface getMovieService() {
         return movieService;
@@ -14,8 +18,6 @@ public class MovieController {
     public void setMovieService(MovieServiceInterface movieService) {
         this.movieService = movieService;
     }
-
-    MovieServiceInterface movieService;
 
     public void addUsingConsole(){
         System.out.println( "What is the title of film that you want to add ?" );
