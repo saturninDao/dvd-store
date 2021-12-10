@@ -1,6 +1,7 @@
-package com.saturnindao.repository;
+package com.saturnindao.repository.memory;
 
 import com.saturnindao.entity.Movie;
+import com.saturnindao.repository.MovieRepositoryInterface;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,15 +1,20 @@
-package com.saturnindao.repository;
+package com.saturnindao.repository.file;
 
 import com.saturnindao.entity.Movie;
+import com.saturnindao.repository.MovieRepositoryInterface;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+@Repository
 public class FileMovieRepository implements MovieRepositoryInterface {
 
     FileWriter writer;
 
+    @Value("${movies.file.location}")
     File file;
 
     public File getFile() {

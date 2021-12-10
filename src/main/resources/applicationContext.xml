@@ -7,13 +7,17 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:annotation-config/>
+    <context:property-placeholder location="classpath:application.properties"/>
+    <context:component-scan base-package="com.saturnindao.controller"/>
+    <context:component-scan base-package="com.saturnindao.service"/>
+    <context:component-scan base-package="com.saturnindao.repository.file"/>
 
-    <bean id="movieRepository" class="com.saturnindao.repository.FileMovieRepository">
-        <property name="file" value="C:\\temp\\movies.csv"/>
-    </bean>
+    <!--
+    <bean id="movieRepository" class="com.saturnindao.repository.file.FileMovieRepository"/>
 
     <bean id="movieService" class="com.saturnindao.service.DefaultMovieService"/>
 
     <bean id="movieController" class="com.saturnindao.controller.MovieController"/>
+    -->
 
 </beans>

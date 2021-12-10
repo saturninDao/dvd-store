@@ -3,7 +3,9 @@ package com.saturnindao.service;
 import com.saturnindao.entity.Movie;
 import com.saturnindao.repository.MovieRepositoryInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DefaultMovieService implements MovieServiceInterface {
 
     @Autowired
