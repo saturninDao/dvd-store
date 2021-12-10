@@ -1,7 +1,13 @@
 
 _
 /src/main/java/com/saturnindao/entity/Movie.java,5\c\5c77b1c9018a30f3cd2ae2a9da918394f7ace8ea
-G
-{$movies.file.location},a\b\ab3290b1915fa58ce8c87d29236404ad924c9ee8
-F
-{$movie.file.location},2\6\267657691098a0d20321c7aa204e8261fab8d5f3
+m
+=src/main/java/com/saturnindao/controller/MovieController.java,b\d\bdaef5af9169fdbd8a3b1cf56506f5615c0b931b
+n
+>src/main/java/com/saturnindao/service/DefaultMovieService.java,e\1\e165ca9b64ac88f0e9e84d197c355bed25a120c2
+p
+@src/main/java/com/saturnindao/service/MovieServiceInterface.java,9\4\94d3c217df5e332d0ee61276742e6ee948e5aa63
+v
+Fsrc/main/java/com/saturnindao/repository/file/FileMovieRepository.java,1\6\161c189674f3310df557c93f11f553c7421667b4
+v
+Fsrc/main/java/com/saturnindao/repository/MovieRepositoryInterface.java,e\3\e35e04d50cec0add2dcd0d407e0de462fec87a7b

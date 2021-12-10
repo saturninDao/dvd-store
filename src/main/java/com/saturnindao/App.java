@@ -18,8 +18,8 @@ public class App
 
         ApplicationContext context = SpringApplication.run(App.class, args);
        // ApplicationContext context = new AnnotationConfigApplicationContext(App.class);
-        MovieController movieController=context.getBean(MovieController.class);
+       // MovieController movieController=context.getBean(MovieController.class);
 
-        movieController.addUsingConsole();
+       // movieController.addUsingConsole();
     }
 }
