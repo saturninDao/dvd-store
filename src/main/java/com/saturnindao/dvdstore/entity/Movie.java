@@ -1,4 +1,4 @@
-package com.saturnindao.entity;
+package com.saturnindao.dvdstore.entity;
 
 public class Movie {
 

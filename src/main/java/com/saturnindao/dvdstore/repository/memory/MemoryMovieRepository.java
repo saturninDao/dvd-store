@@ -1,7 +1,7 @@
-package com.saturnindao.repository.memory;
+package com.saturnindao.dvdstore.repository.memory;
 
-import com.saturnindao.entity.Movie;
-import com.saturnindao.repository.MovieRepositoryInterface;
+import com.saturnindao.dvdstore.entity.Movie;
+import com.saturnindao.dvdstore.repository.MovieRepositoryInterface;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -15,5 +15,10 @@ public class MemoryMovieRepository implements MovieRepositoryInterface {
     public void add(Movie movie){
         movies.add(movie);
         System.out.println("The movie "+movie.getTitle()+" has been added.");
+    }
+
+    @Override
+    public List<Movie> list() {
+        return movies;
     }
 }
