@@ -21,14 +21,17 @@ public class DefaultMovieService implements MovieServiceInterface {
         this.movieRepository = movieRepository;
     }
 
-
-
     public void registerMovie(Movie movie){
         movieRepository.add(movie);
     }
 
     public List<Movie>getMovieList(){
         return movieRepository.list();
+    }
+
+    @Override
+    public Movie getMovieById(long id) {
+        return movieRepository.getById(id);
     }
 
 }

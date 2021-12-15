@@ -2,7 +2,6 @@ package com.saturnindao.dvdstore.repository.memory;
 
 import com.saturnindao.dvdstore.entity.Movie;
 import com.saturnindao.dvdstore.repository.MovieRepositoryInterface;
-import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,5 +19,12 @@ public class MemoryMovieRepository implements MovieRepositoryInterface {
     @Override
     public List<Movie> list() {
         return movies;
+    }
+
+    @Override
+    public Movie getById(long id) {
+        return movies.stream().
+                filter(m -> m.getId()==id).
+                findFirst().get();
     }
 }
