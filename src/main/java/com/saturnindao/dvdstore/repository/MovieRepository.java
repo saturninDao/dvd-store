@@ -1,7 +1,8 @@
 package com.saturnindao.dvdstore.repository;
-
+/*
 import com.saturnindao.dvdstore.entity.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
@@ -10,10 +11,66 @@ import org.springframework.stereotype.Repository;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
-public class MovieRepository implements MovieRepositoryInterface{
+public class MovieRepository implements MovieRepositoryInterface {
+    @Override
+    public <S extends Movie> S save(S s) {
+        return null;
+    }
 
+    @Override
+    public <S extends Movie> Iterable<S> saveAll(Iterable<S> iterable) {
+        return null;
+    }
+
+    @Override
+    public Optional<Movie> findById(Long aLong) {
+        return Optional.empty();
+    }
+
+    @Override
+    public boolean existsById(Long aLong) {
+        return false;
+    }
+
+    @Override
+    public Iterable<Movie> findAll() {
+        return null;
+    }
+
+    @Override
+    public Iterable<Movie> findAllById(Iterable<Long> iterable) {
+        return null;
+    }
+
+    @Override
+    public long count() {
+        return 0;
+    }
+
+    @Override
+    public void deleteById(Long aLong) {
+
+    }
+
+    @Override
+    public void delete(Movie movie) {
+
+    }
+
+    @Override
+    public void deleteAll(Iterable<? extends Movie> iterable) {
+
+    }
+
+    @Override
+    public void deleteAll() {
+
+    }
+
+    /*
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
@@ -40,4 +97,7 @@ public class MovieRepository implements MovieRepositoryInterface{
         return jdbcTemplate.queryForObject("SELECT ID, TITLE, GENRE, DESCRIPTION FROM MOVIE WHERE ID=?",new Object[]{id},(rs,rowNum)-> new Movie(rs.getLong("ID"),
                 rs.getString("TITLE"),rs.getString("GENRE"),rs.getString("DESCRIPTION")));
     }
+
+
 }
+  */

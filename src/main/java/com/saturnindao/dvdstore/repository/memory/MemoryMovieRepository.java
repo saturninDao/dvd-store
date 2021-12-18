@@ -5,6 +5,8 @@ import com.saturnindao.dvdstore.repository.MovieRepositoryInterface;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 
 //@Repository
 public class MemoryMovieRepository implements MovieRepositoryInterface {
@@ -13,22 +15,60 @@ public class MemoryMovieRepository implements MovieRepositoryInterface {
 
     private static List<Movie> movies = new ArrayList<>();
 
-    public Movie add(Movie movie){
-        movie.setId(lastId++);
-        movies.add(movie);
-        System.out.println("The movie "+movie.getTitle()+" has been added.");
-        return movie;
+    @Override
+    public <S extends Movie> S save(S s) {
+        return null;
     }
 
     @Override
-    public List<Movie> list() {
-        return movies;
+    public <S extends Movie> Iterable<S> saveAll(Iterable<S> iterable) {
+        return null;
     }
 
     @Override
-    public Movie getById(long id) {
+    public Optional<Movie> findById(Long aLong) {
         return movies.stream().
-                filter(m -> m.getId()==id).
-                findFirst().get();
+                filter(m -> Objects.equals(m.getId(), aLong)).
+                findFirst();
+    }
+
+    @Override
+    public boolean existsById(Long aLong) {
+        return false;
+    }
+
+    @Override
+    public Iterable<Movie> findAll() {
+        return null;
+    }
+
+    @Override
+    public Iterable<Movie> findAllById(Iterable<Long> iterable) {
+        return null;
+    }
+
+    @Override
+    public long count() {
+        return 0;
+    }
+
+    @Override
+    public void deleteById(Long aLong) {
+
+    }
+
+    @Override
+    public void delete(Movie movie) {
+
+    }
+
+    @Override
+    public void deleteAll(Iterable<? extends Movie> iterable) {
+
+    }
+
+    @Override
+    public void deleteAll() {
+
     }
 }

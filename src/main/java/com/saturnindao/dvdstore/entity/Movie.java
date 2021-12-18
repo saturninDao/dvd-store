@@ -1,7 +1,10 @@
 package com.saturnindao.dvdstore.entity;
 
+import org.springframework.data.annotation.Id;
+
 public class Movie {
 
+    @Id
     Long id;
     String title;
     String genre;
