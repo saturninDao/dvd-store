@@ -63,11 +63,6 @@ public class MemoryMovieRepository implements MovieRepositoryInterface {
     }
 
     @Override
-    public void deleteAllById(Iterable<? extends Long> longs) {
-
-    }
-
-    @Override
     public void deleteAll(Iterable<? extends Movie> iterable) {
 
     }
